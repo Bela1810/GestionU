@@ -103,7 +103,7 @@ class Registro(QDialog):
                 mensaje_registro.setText("Registrado con exito")
                 mensaje_registro.setStandardButtons(QMessageBox.Ok)
                 mensaje_registro.exec()
-                self.__clear()
+                self.__vaciar()
             else:
                 mensaje = QMessageBox(self)
                 mensaje.setWindowTitle("AVISO")
