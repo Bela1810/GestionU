@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>899</width>
-    <height>719</height>
+    <width>947</width>
+    <height>761</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -66,7 +66,7 @@ background-color: rgb(255, 0, 0);</string>
     <rect>
      <x>-10</x>
      <y>0</y>
-     <width>921</width>
+     <width>961</width>
      <height>101</height>
     </rect>
    </property>
@@ -86,7 +86,7 @@ background-color: rgb(255, 0, 0);</string>
     <rect>
      <x>540</x>
      <y>140</y>
-     <width>331</width>
+     <width>391</width>
      <height>401</height>
     </rect>
    </property>
@@ -113,9 +113,9 @@ background-color: rgb(255, 0, 0);</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>560</y>
-     <width>491</width>
+     <x>80</x>
+     <y>580</y>
+     <width>421</width>
      <height>131</height>
     </rect>
    </property>
@@ -124,6 +124,9 @@ background-color: rgb(255, 0, 0);</string>
    </property>
    <property name="pixmap">
     <pixmap>../imagenes/logo_udemedellin2.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>
