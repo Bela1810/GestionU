@@ -1,9 +1,10 @@
 from PyQt5 import uic
-from PyQt5.QtWidgets import QMainWindow, QDialog, QMessageBox, QWidget, QAbstractItemView, QInputDialog
+from PyQt5.QtWidgets import QMainWindow, QDialog, QMessageBox, QWidget, QAbstractItemView, QInputDialog, QLabel
 from PyQt5.uic import loadUi
 from modelo import *
 from excepciones import *
-from PyQt5.QtGui import QStandardItemModel, QStandardItem
+from PyQt5.QtGui import QStandardItemModel, QStandardItem, QFont
+
 
 class Ventana_principal(QMainWindow):
     def __init__(self):
@@ -107,7 +108,7 @@ class Registro(QDialog):
             else:
                 mensaje = QMessageBox(self)
                 mensaje.setWindowTitle("AVISO")
-                mensaje.setText("Debes rellenar todos los campos para finalizar el registro")
+                mensaje.setText("Debes rellenar todos los espacios para finalizar el registro")
                 mensaje.setIcon(QMessageBox.Warning)
                 mensaje.setStandardButtons(QMessageBox.Ok)
                 mensaje.exec()
@@ -275,6 +276,7 @@ class Ventana_Calendario(QWidget):
             messageBox.setStandardButtons(QMessageBox.Ok)
             messageBox.exec()
 
+
         else:
             fecha = self.calendarWidget.selectedDate().toPyDate()
             messageBox = QMessageBox()
@@ -299,6 +301,18 @@ class Ventana_clima(QDialog):
         QDialog.__init__(self)
         uic.loadUi("gui/clima.ui", self)
         self.setFixedSize(self.size())
+        self.setFixedSize(self.size())
+        self.lable_desc = QLabel(self)
+        self.lable_desc.setGeometry(360, 205, 500, 100)
+        self.lable_desc.setText(desc_final)
+        self.lable_desc.setFont(QFont('Arial', 15))
+        self.lable_desc.setStyleSheet("QLabel { background-color : red; color : white; }")
+
+        self.lable_temp = QLabel(self)
+        self.lable_temp.setGeometry(440, 200, 200, 20)
+        self.lable_temp.setText(str(temp_final))
+        self.lable_temp.setFont(QFont('Arial', 15))
+        self.lable_temp.setStyleSheet("QLabel { background-color : red; color : white; }")
 
 
 

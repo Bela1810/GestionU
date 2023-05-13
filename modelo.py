@@ -1,5 +1,7 @@
 import csv
 from excepciones import *
+import requests
+
 
 class Producto:
     def __init__(self, nombre: str, precio: float):
@@ -164,6 +166,23 @@ class Calendario:
 
     def __str__(self):
         return f"Dia: {self.dia} ---Mes: {self.mes}---- Año: {self.año}"
+
+class Clima:
+
+    def obtener_clima(self):
+        url = f"http://api.openweathermap.org/data/2.5/weather?q=Medellin&appid=644e753bbed478fed4180528f27c9a24&units=metric"
+        respuesta = requests.get(url)
+        datos_clima = respuesta.json()
+        return datos_clima
+
+
+Clima_Medellin = Clima()
+datos_clima = Clima_Medellin.obtener_clima()
+temperatura = datos_clima["main"]["temp"]
+descripcion = datos_clima["weather"][0]["description"]
+
+temp_final = "the temp is: " + str(temperatura)
+desc_final = "the weather todays is: " + str(descripcion)
 
 
 

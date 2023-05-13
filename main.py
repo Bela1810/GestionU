@@ -5,7 +5,7 @@ from interfaz import *
 if __name__ == '__main__':
 
     app = QApplication(sys.argv)
-    inicio = Ventana_principal()
+    inicio = Ventana_clima()
     inicio.show()
     sys.exit(app.exec())
 
