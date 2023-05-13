@@ -181,8 +181,8 @@ datos_clima = Clima_Medellin.obtener_clima()
 temperatura = datos_clima["main"]["temp"]
 descripcion = datos_clima["weather"][0]["description"]
 
-temp_final = "the temp is: " + str(temperatura)
-desc_final = "the weather todays is: " + str(descripcion)
+temp_final = "La temperatura el día de hoy es: " + str(temperatura)
+desc_final = "El clima el día de hoy es: " + str(descripcion)
 
 
 

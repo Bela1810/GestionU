@@ -302,17 +302,11 @@ class Ventana_clima(QDialog):
         uic.loadUi("gui/clima.ui", self)
         self.setFixedSize(self.size())
         self.setFixedSize(self.size())
-        self.lable_desc = QLabel(self)
-        self.lable_desc.setGeometry(360, 205, 500, 100)
-        self.lable_desc.setText(desc_final)
-        self.lable_desc.setFont(QFont('Arial', 15))
-        self.lable_desc.setStyleSheet("QLabel { background-color : red; color : white; }")
+        self.label_2.setText(desc_final)
+        self.label_2.setFont(QFont('Monospac821 BT', 10))
+        self.label_3.setText(str(temp_final))
+        self.label_3.setFont(QFont('Monospac821 BT', 10))
 
-        self.lable_temp = QLabel(self)
-        self.lable_temp.setGeometry(440, 200, 200, 20)
-        self.lable_temp.setText(str(temp_final))
-        self.lable_temp.setFont(QFont('Arial', 15))
-        self.lable_temp.setStyleSheet("QLabel { background-color : red; color : white; }")
 
 
 
