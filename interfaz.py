@@ -121,7 +121,7 @@ class Registro(QDialog):
             mensaje.setText(err.mensaje)
             mensaje.setStandardButtons(QMessageBox.Ok)
             mensaje.exec()
-            self.__clear()
+            self.__vaciar()
 
 
 class Seleccion(QDialog):
