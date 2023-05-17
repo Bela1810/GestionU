@@ -1,4 +1,2 @@
-
 manuela,mejia,ingenieria,1015066951,12345
-
-f,f,f,123,123
+Isabella,Montoya Castellanos,Ingenieria,123,123
